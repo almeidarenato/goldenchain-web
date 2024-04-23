@@ -3,8 +3,8 @@ import { ModeToggle } from "../mode-toggle";
 function Header() {
   return (
     <>
-      <div className="w-full border rounded-lg">
-        Tema: <ModeToggle />
+      <div className="w-full border rounded-lg flex justify-end">
+        <ModeToggle />
       </div>
     </>
   );
