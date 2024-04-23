@@ -1,3 +1,4 @@
+import { CopyIcon } from "@radix-ui/react-icons";
 import {
   Table,
   TableBody,
@@ -6,6 +7,16 @@ import {
   TableRow,
   TableCell,
 } from "./components/ui/table";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
 import { ResizablePanel, ResizablePanelGroup } from "./components/ui/resizable";
 import { Input } from "./components/ui/input";
 import { Label } from "./components/ui/label";
@@ -51,9 +62,62 @@ function App() {
             </div>
             <div>
               <div className="flex flex-wrap p-3 gap-3 lg:flex-nowrap">
-                <Button className="w-full lg:w-40" variant="outline">
-                  Mostrar Perfil
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="w-full lg:w-40" variant="outline">
+                      Profile
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[425px]">
+                    <DialogHeader>
+                      <DialogTitle>Profile</DialogTitle>
+                      <DialogDescription>
+                        Consulta ao Perfil
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="grid gap-4 py-4">
+                      <div className="grid grid-cols-5 items-center gap-4">
+                        <Label htmlFor="name" className="text-right">
+                          Nome
+                        </Label>
+                        <Input
+                          id="name"
+                          value="Cássio Serra"
+                          className="col-span-3"
+                        />
+                      </div>
+                      <div className="grid grid-cols-5 items-center gap-4">
+                        <Label htmlFor="username" className="text-right">
+                          Usuário
+                        </Label>
+                        <Input
+                          id="username"
+                          value="@cassioserra"
+                          className="col-span-3"
+                        />
+                      </div>
+                      <div className="grid grid-cols-5 items-center gap-4">
+                        <Label htmlFor="address" className="text-right">
+                          Endereço
+                        </Label>
+                        <Input
+                          id="address"
+                          value="219302190321xE"
+                          className="col-span-3"
+                        />
+                        <Button type="submit" size="sm" className="px-3">
+                          <span className="sr-only">Copy</span>
+                          <CopyIcon className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    </div>
+                    <DialogFooter>
+                      <DialogClose asChild>
+                        <Button type="submit">Fechar</Button>
+                      </DialogClose>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
           </div>
