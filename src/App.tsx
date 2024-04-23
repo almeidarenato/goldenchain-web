@@ -35,7 +35,7 @@ function App() {
         <div>
           <div className="flex-nowrap border rounded-lg lg:flex lg:flex-nowrap lg:items-center">
             <div className="flex flex-wrap p-3 gap-3 ">
-              <div className="flex-column w-47 lg:w-72">
+              <div className="flex-column w-48 lg:w-72">
                 <Label htmlFor="endereco">Endereço</Label>
                 <Input type="text" id="endereco" placeholder="Endereço" />
               </div>
