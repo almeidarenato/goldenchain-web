@@ -33,28 +33,28 @@ function App() {
       <div className="p-2 max-w-4xl mx-auto space-y-2">
         <h1 className="text-3xl font-bold text-center">GoldChain</h1>
         <div>
-          <div className="flex-nowrap border rounded-lg">
-            <div className="flex flex-wrap p-3 gap-3 lg:flex-nowrap">
-              <div className="flex-column w-full lg:w-96">
+          <div className="flex-nowrap border rounded-lg lg:flex lg:flex-nowrap lg:items-center">
+            <div className="flex flex-wrap p-3 gap-3 ">
+              <div className="flex-column w-47 lg:w-72">
                 <Label htmlFor="endereco">Endereço</Label>
                 <Input type="text" id="endereco" placeholder="Endereço" />
               </div>
-              <div className="flex-column w-48 lg:w-56">
-                <Label htmlFor="codigotransacao">Código da Transação</Label>
+              <div className="flex-column w-32 lg:w-52">
+                <Label htmlFor="codigotransacao">Cód. da Transação</Label>
                 <Input
                   type="text"
                   id="codigotransacao"
-                  placeholder="Código da Transação"
+                  placeholder="Cód. da Transação"
                 />
               </div>
-            </div>
-            <div className="flex justify-start p-3 gap-3 ">
-              <Button className="w-full lg:w-40" variant="outline">
-                Detalhes
-              </Button>
-              <Button className="w-full lg:w-40" variant="default">
-                Ler QRCode
-              </Button>
+              <div className="flex gap-3 w-full lg:items-center lg:h-20 lg:w-40">
+                <Button className="w-full" variant="outline">
+                  Detalhes
+                </Button>
+                <Button className="w-full" variant="default">
+                  Ler QRCode
+                </Button>
+              </div>
             </div>
           </div>
           <div className="flex-nowrap border rounded-lg mt-3">
