@@ -1,4 +1,5 @@
 import { CopyIcon } from "@radix-ui/react-icons";
+import { truncate } from "../src/lib/truncateEthereum";
 import {
   Table,
   TableBody,
@@ -71,9 +72,7 @@ function App() {
                   <DialogContent className="sm:max-w-[425px]">
                     <DialogHeader>
                       <DialogTitle>Profile</DialogTitle>
-                      <DialogDescription>
-                        Consulta ao Perfil
-                      </DialogDescription>
+                      <DialogDescription>Consulta ao Perfil</DialogDescription>
                     </DialogHeader>
                     <div className="grid gap-4 py-4">
                       <div className="grid grid-cols-5 items-center gap-4">
@@ -102,7 +101,7 @@ function App() {
                         </Label>
                         <Input
                           id="address"
-                          value="219302190321xE"
+                          value="0xb794f5ea0ba39494ce839613fffba74279579268"
                           className="col-span-3"
                         />
                         <Button type="submit" size="sm" className="px-3">
@@ -142,7 +141,12 @@ function App() {
                       <TableCell> 0,483 gr </TableCell>
                       <TableCell> 0,02 gr </TableCell>
                       <TableCell> Jóia </TableCell>
-                      <TableCell> 1e2309132009321x2e </TableCell>
+                      <TableCell>
+                        {" "}
+                        {truncate(
+                          "0x1f9090aaE28b8a3dCeaDf281B0F12828e676c326"
+                        )}{" "}
+                      </TableCell>
                       <TableCell> ??? </TableCell>
                     </TableRow>
                     <TableRow>
@@ -150,7 +154,10 @@ function App() {
                       <TableCell> 0,483 gr </TableCell>
                       <TableCell> 0,02 gr </TableCell>
                       <TableCell> Jóia </TableCell>
-                      <TableCell> 1e2309132009321x2e </TableCell>
+                      <TableCell>
+                        {" "}
+                        {truncate("0xb794f5ea0ba39494ce839613fffba74279579268")}
+                      </TableCell>
                       <TableCell> ??? </TableCell>
                     </TableRow>
                     <TableRow>
@@ -158,7 +165,12 @@ function App() {
                       <TableCell> 0,483 gr </TableCell>
                       <TableCell> 0,02 gr </TableCell>
                       <TableCell> Jóia </TableCell>
-                      <TableCell> 1e2309132009321x2e </TableCell>
+                      <TableCell>
+                        {" "}
+                        {truncate(
+                          "0x1e3f83f881b440c183e7ba99177c93bd9cd34025eb0c06dbf331d430faa2cfdd"
+                        )}
+                      </TableCell>
                       <TableCell> ??? </TableCell>
                     </TableRow>
                   </TableBody>
