@@ -58,15 +58,12 @@ function App() {
             </div>
           </div>
           <div className="flex-nowrap border rounded-lg mt-3">
-            <div className="flex flex-wrap p-3 gap-3 lg:flex-nowrap">
-              <span className="font-bold">Nome:</span> Cássio Serra
-            </div>
             <div>
               <div className="flex flex-wrap p-3 gap-3 lg:flex-nowrap">
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button className="w-full lg:w-40" variant="outline">
-                      Profile
+                      Cássio Serra
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-[425px]">
