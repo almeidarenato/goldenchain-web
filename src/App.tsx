@@ -27,7 +27,7 @@ function App() {
                 <Label htmlFor="endereco">Endereço</Label>
                 <Input type="text" id="endereco" placeholder="Endereço" />
               </div>
-              <div className="flex-column w-full lg:w-96">
+              <div className="flex-column w-full lg:w-56">
                 <Label htmlFor="codigotransacao">Código da Transação</Label>
                 <Input
                   type="text"
