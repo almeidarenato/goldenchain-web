@@ -25,7 +25,20 @@ import { Button } from "./components/ui/button";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./components/header/header";
 
+import { ChangeEvent, useState } from "react";
+
 function App() {
+  const [endereco, setEndereco] = useState("");
+
+  const handleBlur = () => {
+    const truncated = truncate(endereco);
+    setEndereco(truncated);
+  };
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEndereco(event.target.value);
+  };
+
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Header />
@@ -37,7 +50,14 @@ function App() {
             <div className="flex flex-wrap p-3 gap-3 ">
               <div className="flex-column w-48 lg:w-72">
                 <Label htmlFor="endereco">Endereço</Label>
-                <Input type="text" id="endereco" placeholder="Endereço" />
+                <Input
+                  type="text"
+                  id="endereco"
+                  placeholder="Endereço"
+                  value={endereco}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
               </div>
               <div className="flex-column w-32 lg:w-52">
                 <Label htmlFor="codigotransacao">Cód. da Transação</Label>
